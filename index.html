@@ -41,8 +41,22 @@
                 return "player";
             }
             else return "computer";
-            
-            
+        }
+
+
+        function game(){
+            let playerwins = 0;
+            let computerwins = 0;
+
+            while(playerwins != 5 && computerwins != 5){
+                let round = playRound();
+                if(round == "player") playerwins++;
+                if(round == "computer") computerwins++;
+            }
+            if(computerwins > playerwins) console.log("Computer won")
+            else console.log("Player won")
+
+            console.log(playerwins, computerwins)
             
 
 
