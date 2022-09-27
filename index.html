@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors</title>
+</head>
+<body>
+    
+
+    <script>
+
+        function getComputerChoice(){
+            let choice = Math.floor(Math.random()*3)
+            switch(choice) {
+                case 0:
+                return "rock";
+                    break;
+                case 1:
+                return "paper";
+                    break;
+                case 2:
+                    return "scissors";
+             
+            }
+
+        }
+
+        function playRound(){
+            let userInput = prompt().toLowerCase();
+            if (!isNaN(userInput)){
+                console.log("Please Enter valid String")
+                return;
+            }
+            let computerChoice = getComputerChoice();
+            if(userInput===computerChoice){
+                return  "neutral" }
+
+            if(userInput === "rock" && computerChoice === "scissors" || userInput === "paper" && computerChoice==="rock" || userInput==="scissors" && computerChoice === "paper"){
+                return "player";
+            }
+            else return "computer";
+            
+            
+            
+
+
+        }
+    
+
+
+    </script>
+
+</body>
+</html>
